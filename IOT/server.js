@@ -71,7 +71,7 @@ mongoose
   .connect(process.env.DB_URL)
   .then(() => {
     console.log('Connected to MongoDB');
-    app.listen(3000, () => {
+    app.listen(process.env.Port, () => {
       console.log('Node API is running on port 3000');
     });
   })
