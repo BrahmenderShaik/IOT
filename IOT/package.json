@@ -2,11 +2,10 @@
   "name": "npm-init-sample",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "npm start": "nodemon server.js",
-    "npm build": "npm install",
+    "start": "nodemon server.js",
     "dev": "nodemon server.js"
   },
   "author": "",
