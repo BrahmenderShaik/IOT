@@ -7,15 +7,14 @@ const app = express();
 
 app.use(express.json());
 
-app.get('/addvalues', async (req, res) => {
-  const data= {
-      temperature: Number(req.query.temperature),
-      humidity: Number(req.query.humidity)
-    }
+app.post('/addvalues', async (req, res) => {
+  const data = {
+    temperature: Number(req.body.temperature),
+    humidity: Number(req.body.humidity)
+  };
   const createdValue = await Values.create(data);
   res.status(200).json(createdValue);
 });
-
 // Read operation (GET all values)
 app.get('/values', async (req, res) => {
   try {
